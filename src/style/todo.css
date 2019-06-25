@@ -1,3 +1,178 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  background-color: whitesmoke;
+}
+
+.registration-form h2 {
+  margin:0 auto
+}
+
+input:focus {
+  outline:none;
+}
+
+.sort {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.registration-form {  
+  margin: 0 auto;
+  width: 90%;
+  padding: 1em;
+  border: 2px solid black;
+  border-radius: 1em;
+  background-color: rgb(187, 218, 228);
+}
+
+.todo-container {  
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 90%;
+  padding: 0px 20px 0px 20px;
+  border: 2px solid black;
+  border-radius: 1em;
+  background-color: rgb(237, 148, 148);
+}
+
+.todo-container p {
+  margin: 0 0 10px 0;
+  padding: 0px;
+}
+.todo-container h2 {
+  margin: 15px 0 5px 0;
+}
+
+label {
+  font-size: 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+input, textarea {
+  font: 15px sans-serif;
+  margin: 0 0 10px 0;
+  width: 100%;
+  box-sizing: content-box;
+  border: 1px solid black;
+  border-radius: 1em;
+}
+
+.range {
+  position: relative;
+  width: 100%;
+}
+
+.range input {
+  width: 45.5%;
+  position: absolute;
+  top: 10px;
+  height: 5px;
+  -webkit-appearance: none;
+}
+
+.done {
+  background-color: lightgreen;
+}
+.done h2 + p {
+  text-decoration: line-through; 
+}
+
+.range-labels {
+  margin: 25px -4.5% 0 ;
+  padding: 0;
+  padding-bottom: 10px;
+  list-style: none;
+}
+  
+.range-labels li {
+    position: relative;
+    float: left;
+    width: 10%;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+
+.registration-form button {
+  float: right;
+  font-size: 12px;
+  padding: 5px 10px 5px 10px;
+  margin: -30px 0 0 0;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.remove-button { 
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: none;
+}
+
+.done .remove-button {
+  display: unset;
+}
+
+@media screen and (min-width: 400px) {
+  .registration-form button {
+    font-size: 15px;
+    margin: -35px 5% 0 0;
+
+  }
+}
+
+@media screen and (min-width: 550px) {
+
+  .todo-container {  
+    width: 80%;
+  }
+  .registration-form{  
+    width: 80%;
+  }
+
+
+  .todo-info {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "importance timestamp remove-button";
+}
+  
+.importance { 
+  grid-area: importance;
+ }
+  
+.timestamp {
+  text-align: left;
+    font-style: italic;
+    grid-area: timestamp;
+}
+  
+  .registration-form button {
+    font-size: 20px;
+    margin: -35px 5% 0 0;
+  }
+  
+  .remove-button { 
+    grid-area: remove-button;
+    align-content: right;
+    background-color: inherit;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: none;
+  }
+}
+
+
+
